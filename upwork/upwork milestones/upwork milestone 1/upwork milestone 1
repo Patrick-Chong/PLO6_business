@@ -1,0 +1,14 @@
+What I need tesseract/OCR to do: 
+
+1. identify_positions.py 
+- fill_opponents_in_pot_dict()
+- my_relative_position()
+
+
+2. mixin_action_behind_me.py 
+- self.opp_bet_behind
+- right at the bottom- tesseract to scan if there is money in the middle, if not it means we are still pre-flop, so run the script again
+
+2. PLO6_Pre_flop_play_logic.py 
+- fill in self.nums_list using tesseract
+- fill in self. suit_list using tesseract

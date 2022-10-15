@@ -1,0 +1,54 @@
+
+
+suitedAce() will: 
+	- evaluate whether we have a suited ace (double suited ace will be in handsToplayfromanyposition())
+	- we won't consider anything worse than this in terms of suited cards, so all else will return False
+
+Wrap() will: 
+	- Determine if there is any wrap potential in our hand.
+	- There are a total of 3 ways to achieve this; no gapper, one-gapper high, one-gapper low]
+	- I will only play wraps with the smallest card being 5 or greater
+
+HighPairs() will: 
+	- Determine whether we hold One or two high pair(s)
+	- High pair is one where it is >= 10 
+
+
+handsToPlayFromAnyPosition() will: 
+ 	- Define certain hands where we will play from any position, and outline what the action will be 
+
+
+General note: I won't define what hands I won't play, it is easier just to define what I WILL play and the rest I will fold. 
+
+
+
+
+
+Logic of bot: 
+1. Calcuate the value of the hand (based on the aforementioned 3 functions)
+2. Compare this value to the position that I am in relative to button and act accordingly. 
+We will split this into 2 scenarios; 
+	- button +2 anticlockwise (3 positions) BEST POSITIONS
+	- button clockwise (3 positions) WORSE POSITIONS
+
+
+
+
+Position plays: 
+	- if the function handsToplayfromAnyposition is true, then play the hand as stated.
+	Otherwise;
+
+	On the button: 
+		- play if any combination of two functions return True
+
+	Position anticlockwise one seat next to the button: 
+		- Same as on the button 
+
+	Position anticlockwise two seat next to the button: 
+		- Two pair + one other function true 
+		- suited ace + one other function true
+
+	Other positions; 
+		- suited ace + wrap potential true 
+		- suited ace + high pair 
+
