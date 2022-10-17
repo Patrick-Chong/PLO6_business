@@ -1,0 +1,11 @@
+Adding clicks to the bot: 
+
+1. Click on each of the four tables one by one, and stop when the yellow timer starts running (this indicates that it is our turn to act) - then run my python code to play; 
+
+2. Pre-flop script is run first, script will return a decision: call, raise/bet, check or fold, and based on this, we need to click this button on our screen (call this script 'running the clicker'- it will be an OCR script)
+(A caveat is that when we RAISE/BET, it is not just a button we need to click, but either an amount we need to type in or a bar we need to drag to change the bet amount). 
+
+3. Then we loop back to 1. 
+
+4. Post flop script is run for flop/turn/river; 
+	- For each of the three streets we need to run execute 'running the clicker'
